@@ -1,14 +1,18 @@
+// Paso 1: Importar createRoot
+import { createRoot } from 'react-dom/client';
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
+import { CharacterProvider } from './context/CharacterContext'; // Asegúrate de que la ruta es correcta
 
+// Paso 2: Seleccionar el contenedor del DOM
+const container = document.getElementById('root');
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// Paso 3: Crear una raíz y usarla para renderizar la App
+const root = createRoot(container); // Crear la raíz
 root.render(
   <React.StrictMode>
-    <App />
+    <CharacterProvider>
+      <App />
+    </CharacterProvider>
   </React.StrictMode>
 );
-
-

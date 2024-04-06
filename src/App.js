@@ -1,13 +1,14 @@
 // En src/App.js
 import React from 'react';
-import './App.css';
-import Character from './components/Character'; // Asegúrate de que la ruta sea correcta
+import { CharacterProvider } from './context/CharacterContext';
+import CharacterList from './components/CharacterList'; 
 
 function App() {
   return (
     <div className="App">
-      <h1>Marvel Challenge</h1>
-      <Character /> {/* Usar el componente Character */}
+      <CharacterProvider> {/* Asegúrate de que CharacterProvider envuelve toda la aplicación */}
+        <CharacterList />
+      </CharacterProvider>
     </div>
   );
 }

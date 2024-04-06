@@ -1,31 +1,11 @@
-// En src/components/Character.js
-import React, { useEffect, useState } from 'react';
-import { getCall } from '../api/client';
+// En src/components/Character.jsx
+import React from 'react';
 
-const Character = () => {
-  const [characters, setCharacters] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await getCall('characters');
-        setCharacters(data.results); // Ajusta según la estructura de datos de Marvel API
-      } catch (error) {
-        console.error('Error fetching characters:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
+const Character = ({ character }) => { // Asegúrate de pasar el personaje correctamente como prop
   return (
-    <div>
-      <h2>Marvel Characters</h2>
-      {characters.map(character => (
-        <div key={character.id}>
-          {character.name}
-        </div>
-      ))}
+    <div className="character-card">
+      <img src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt={character.name} />
+      <h2>{character.name}</h2>
     </div>
   );
 };
