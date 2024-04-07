@@ -1,0 +1,71 @@
+.character-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 10px; /* Espacio entre las tarjetas */
+}
+
+.character-card {
+  position: relative; // Posición relativa para que los pseudo-elementos se posicionen correctamente
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: #fff;
+  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.character-card::after {
+  content: ''; // Contenido del pseudo-elemento
+  position: absolute; // Posición absoluta con respecto al elemento padre
+  bottom: 0; // Alinear con la parte inferior del elemento padre
+  right: 0; // Alinear con el lado derecho del elemento padre
+  width: 0; // Ancho del triángulo
+  height: 0; // Altura del triángulo
+  border-top: 15px solid white; // Borde superior del triángulo (para crear el efecto de esquina cortada)
+  border-left: 15px solid transparent; // Borde izquierdo transparente
+  transform: rotate(90deg); // Rotar el triángulo 45 grados
+}
+
+
+.character-image {
+  width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+  height: 13rem/* La altura se ajusta automáticamente */
+}
+
+
+.character-details {
+  padding: 10px;
+  padding-top: 0;
+}
+
+.character-line {
+  height: 4px;
+  width: 112%;
+  background-color: rgb(226, 15, 15);
+  margin: 0 -10px 10px;
+}
+
+.character-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.character-info .heart-icon {
+  font-size: 20px; /* Tamaño del icono del corazón */  
+  padding: 5px; /* Añadir espacio alrededor del icono del corazón */
+}
+
+.character-info p {
+  margin: 0;
+  font-size: 14px; /* Tamaño del texto más pequeño */
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:100 /* Hacer que el texto sea más recto */
+}
+
+/* Estilo del icono del corazón cuando está marcado como favorito */
+.character-info .heart-icon.favorite {
+  color: red; /* Cambia el color del icono del corazón a rojo cuando está marcado como favorito */
+}

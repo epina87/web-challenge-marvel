@@ -1,13 +1,15 @@
-// En src/App.js
 import React from 'react';
 import { CharacterProvider } from './context/CharacterContext';
-import CharacterList from './components/CharacterList'; 
+import './App.scss';
+import MainView from './components/MainView';
+import Header from './components/Header'; // Importamos el componente Header
 
 function App() {
   return (
     <div className="App">
-      <CharacterProvider> {/* Asegúrate de que CharacterProvider envuelve toda la aplicación */}
-        <CharacterList />
+      <CharacterProvider>
+        <Header /> 
+        <MainView />
       </CharacterProvider>
     </div>
   );

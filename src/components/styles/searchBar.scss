@@ -1,0 +1,18 @@
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 20px; /* Margen superior */
+    margin-bottom: 20px; /* Margen inferior */
+  }
+  
+  .search-input {
+    flex: 1;
+    border: none;
+    border-bottom: 1px solid black; /* Línea de subrayado */
+    padding: 5px;
+  }
+  
+  .search-icon {
+    margin-right: 10px;
+  }
+  

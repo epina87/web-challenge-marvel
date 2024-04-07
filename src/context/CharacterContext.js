@@ -2,10 +2,11 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { getCall } from '../api/client';
 
-const CharacterContext = createContext();
+export const CharacterContext = createContext();
 
 export const CharacterProvider = ({ children }) => {
   const [characters, setCharacters] = useState([]);
+  const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
     const fetchCharacters = async () => {
@@ -20,12 +21,12 @@ export const CharacterProvider = ({ children }) => {
   
     fetchCharacters();
   }, []);
-  
-  console.log('Characters in Context:', characters); // Verificar si los datos se están almacenando en el estado del contexto
-  
-  
 
-  return <CharacterContext.Provider value={{ characters }}>{children}</CharacterContext.Provider>;
+  return (
+    <CharacterContext.Provider value={{ characters, favorites, setFavorites }}>
+      {children}
+    </CharacterContext.Provider>
+  );
 };
 
 export const useCharacters = () => useContext(CharacterContext);

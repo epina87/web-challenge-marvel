@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: red;
+  padding: 20px;
+}
+
+.logo {
+  width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.heart-icon {
+  font-size: 24px; /* Ajusta el tamaño del icono del corazón según sea necesario */
+}
+
+.num-favorites{
+  color: white
+}
