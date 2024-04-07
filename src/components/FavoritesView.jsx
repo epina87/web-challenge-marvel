@@ -1,22 +1,22 @@
-// En tu componente de vista principal (MainView.jsx o similar)
 import React, { useState } from 'react';
 import SearchBar from './SearchBar';
 import CharacterList from './CharacterList';
-import './styles/mainView.scss';
+import './styles/favoritesview.scss'; // Agrega los estilos específicos de FavoritesList
 
-const MainView = () => {
+const FavoritesView = () => {
   const [searchTerm, setSearchTerm] = useState('');
-
+ 
   const handleSearch = (term) => {
     setSearchTerm(term);
   };
 
   return (
-    <div className="main-view">
+    <div className="favorites-view">
+      <h2 className="favorites-title">FAVORITES</h2>
       <SearchBar onSearch={handleSearch} />
-      <CharacterList searchTerm={searchTerm} showAll='true' />
+      <CharacterList searchTerm={searchTerm} showAll='false' />
     </div>
   );
 };
 
-export default MainView;
+export default FavoritesView;

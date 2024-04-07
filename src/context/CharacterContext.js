@@ -12,7 +12,6 @@ export const CharacterProvider = ({ children }) => {
     const fetchCharacters = async () => {
       try {
         const data = await getCall('characters');
-        console.log('Data from API:', data); // Verificar los datos obtenidos de la API
         setCharacters(data.results); // Ajusta según la estructura de datos de Marvel API
       } catch (error) {
         console.error('Error fetching characters:', error);

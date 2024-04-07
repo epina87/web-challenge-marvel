@@ -29,8 +29,8 @@
 
 
 .character-image {
-  width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
-  height: 13rem/* La altura se ajusta automáticamente */
+  width: 100%; 
+  height: 13rem
 }
 
 
@@ -68,4 +68,10 @@
 /* Estilo del icono del corazón cuando está marcado como favorito */
 .character-info .heart-icon.favorite {
   color: red; /* Cambia el color del icono del corazón a rojo cuando está marcado como favorito */
+}
+
+
+.character-detail-link {
+  color: inherit; // Hereda el color del texto
+  text-decoration: none; // Quita el subrayado del enlace
 }

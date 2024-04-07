@@ -23,3 +23,13 @@
 .num-favorites{
   color: white
 }
+
+
+.favorites-link {
+  color: inherit; // Hereda el color del texto
+  text-decoration: none; // Quita el subrayado del enlace
+}
+
+.red-heart {
+  color: red; // Cambia el color del icono de corazón a rojo
+}

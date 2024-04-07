@@ -1,0 +1,145 @@
+
+
+.detail-character-card {
+    position: relative; // Posición relativa para que los pseudo-elementos se posicionen correctamente
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: #fff;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .detail-character-card::after {
+    content: ''; // Contenido del pseudo-elemento
+    position: absolute; // Posición absoluta con respecto al elemento padre
+    bottom: 0; // Alinear con la parte inferior del elemento padre
+    right: 0; // Alinear con el lado derecho del elemento padre
+    width: 0; // Ancho del triángulo
+    height: 0; // Altura del triángulo
+    border-top: 15px solid white; // Borde superior del triángulo (para crear el efecto de esquina cortada)
+    border-left: 15px solid transparent; // Borde izquierdo transparente
+    transform: rotate(90deg); // Rotar el triángulo 45 grados
+  }
+
+.detail-character-details{
+    margin: 0 auto;
+    max-width: 1000px;
+
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Dividir en una columna de 1/3 y otra de 2/3 */
+    gap: 20px; /* Espacio entre las columnas */
+    align-items: center; /* Centrar verticalmente los elementos */
+
+}
+
+.character-comics{
+    background-color: white;
+    color: black;
+    margin: 0 auto;
+    max-width: 1000px;
+
+    padding: 0;
+
+    gap: 20px; /* Espacio entre las columnas */
+    align-items: center; /* Centrar verticalmente los elementos */
+    padding-bottom: 20px;
+}
+
+h3{
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    margin: 0;
+    padding: 20px;
+    display: block;
+    padding: 0;
+}
+
+
+  .detail-character-img {
+    grid-column: 1 / span 1; /* Ocupa una columna */
+  }
+
+  .detail-character-info {
+    grid-column: 2 / span 1; /* Ocupa dos columnas */
+  }
+
+  .detail-character-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .detail-favorite-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .detail-heart-icon {
+    color: #ff0000; /* Color del corazón */
+    font-size: 24px;
+  }
+
+  .detail-favorite {
+    color: #ff0000; /* Color del corazón cuando está marcado como favorito */
+  }
+
+  .detail-character-info .detail-name-character{
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+
+  .detail-character-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  .detail-character-info .heart-icon {
+    font-size: 20px; /* Tamaño del icono del corazón */
+    padding: 5px; /* Añadir espacio alrededor del icono del corazón */
+  }
+
+  .detail-character-info p {
+    margin: 0;
+    font-size: 14px; /* Tamaño del texto más pequeño */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:100 /* Hacer que el texto sea más recto */
+  }
+
+  /* Estilo del icono del corazón cuando está marcado como favorito */
+  .detail-character-info .heart-icon.favorite {
+    color: red; /* Cambia el color del icono del corazón a rojo cuando está marcado como favorito */
+  }
+
+  .detail-description {
+    grid-column: 2 / span 1; /* Ocupa dos columnas */
+    text-align: left; /* Alinear el texto a la izquierda */
+  }
+
+  .detail-character-comics {
+    margin-top: 20px;
+    padding-left: 20px;
+  }
+
+  .slider-container {
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: thin; 
+  }
+
+  .slider-container::-webkit-scrollbar-thumb {
+    background-color: red; 
+  }
+
+
+
+  
