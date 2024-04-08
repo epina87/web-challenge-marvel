@@ -8,6 +8,9 @@ import marvelLogo from '../img/marvel-logo.jpg'; // Importa la imagen del logo d
 const Header = () => {
   const { favorites } = useCharacters();
 
+  // Verifica si favorites es null o undefined antes de acceder a su propiedad length
+  const numFavorites = favorites ? favorites.length : 0;
+
   return (
     <div className="header">
       <div className="header-left">
@@ -20,7 +23,7 @@ const Header = () => {
         <NavLink to="/favorites" className="favorites-link">
           <FaHeart className="heart-icon" />
         </NavLink>
-        <span className='num-favorites'>{favorites.length}</span>
+        <span className='num-favorites'>{numFavorites}</span>
       </div>
     </div>
   );
