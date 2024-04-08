@@ -10,7 +10,7 @@ const Character = ({ character }) => {
 
   useEffect(() => {
     if (character) {
-      // Verifica si el personaje está en la lista de favoritos
+     
       const index = favorites.findIndex((fav) => fav.id === character.id);
       setIsFavorite(index !== -1);
     }
@@ -18,13 +18,13 @@ const Character = ({ character }) => {
 
   const handleFavoriteClick = () => {
     if (character) {
-      // Verifica si el personaje está en la lista de favoritos
+     
       const index = favorites.findIndex((fav) => fav.id === character.id);
       if (index === -1) {
-        // Si no está en la lista de favoritos, agrégalo
+       
         setFavorites([...favorites, character]);
       } else {
-        // Si ya está en la lista de favoritos, quítalo
+        
         const updatedFavorites = favorites.filter((fav) => fav.id !== character.id);
         setFavorites(updatedFavorites);
       }
@@ -32,7 +32,7 @@ const Character = ({ character }) => {
   };
 
   if (!character || !character.id) {
-    return null; // Si el personaje o su ID son undefined, no renderizar nada
+    return null; 
   }
 
   return (

@@ -11,7 +11,6 @@ const CharacterList = ({ searchTerm, showAll }) => {
   );
 
   if (showAll==='false') {
-    console.log('showAll', showAll);
     filteredCharacters = filteredCharacters.filter((character) =>
       favorites.some((fav) => fav.id === character.id)
     );

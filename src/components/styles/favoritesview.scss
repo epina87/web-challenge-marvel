@@ -1,12 +1,16 @@
 .favorites-title{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
-    text-align: left; /* Alinear a la izquierda */
+    text-align: left;
 }
 
 .favorites-view{
     display: grid;
-    grid-template-columns: 1fr; /* Una columna flexible */
-    max-width: 1400px; /* Establece el ancho máximo del contenedor */
-    margin: 0 auto; /* Centra el contenedor */
+    grid-template-columns: 1fr;
+    max-width: 1400px;
+    margin: 0 5vw;
+
 }
+
+
+

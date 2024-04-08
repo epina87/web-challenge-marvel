@@ -24,7 +24,7 @@
   }
 
 .detail-character-details{
-    margin: 0 auto;
+    margin: 0 5vw;
     max-width: 1000px;
 
     padding: 0;
@@ -35,12 +35,14 @@
 
 }
 
+
+
 .character-comics{
     background-color: white;
     color: black;
-    margin: 0 auto;
+    
     max-width: 1000px;
-
+    margin: 0 5vw;
     padding: 0;
 
     gap: 20px; /* Espacio entre las columnas */
@@ -48,16 +50,7 @@
     padding-bottom: 20px;
 }
 
-h3{
-    font-size: 2rem;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: left;
-    margin: 0;
-    padding: 20px;
-    display: block;
-    padding: 0;
-}
+
 
 
   .detail-character-img {
@@ -130,16 +123,90 @@ h3{
     padding-left: 20px;
   }
 
-  .slider-container {
-    width: 100%;
-    overflow-x: auto;
-    scrollbar-width: thin; 
+
+  .slider {
+    
+    overflow-x: auto; /* Permitir desplazamiento horizontal */
+    white-space: nowrap; /* Evitar que los elementos se desplacen a la siguiente línea */
+
+  }
+  
+  .slide {
+    display: inline-block; /* Mostrar los elementos en línea */
+    width: 200px; /* Ancho de cada slide */
+    height: 150px; /* Altura de cada slide */
+    margin-right: 10px; /* Margen derecho entre slides */
+    
+    
   }
 
-  .slider-container::-webkit-scrollbar-thumb {
-    background-color: red; 
+  .slider::-webkit-scrollbar {
+    width: 6px; /* Ancho de la barra de desplazamiento */
+    height: 3px;
+  }
+  
+  .slider::-webkit-scrollbar-thumb {
+    background-color: red; /* Color del fondo de la barra de desplazamiento */
+    border-radius: 5px; /* Borde redondeado de la barra de desplazamiento */
   }
 
 
+  
+  @media screen and (max-width: 768px) {
+    .detail-character-details,
+    .character-comics {
+      margin: 0; 
+    }
+
+    .detail-character-info {
+      font-size: 4vw;
+      margin-right: 2vh;
+    }
+
+    .detail-character-info .detail-name-character {
+      font-size: 3vw;
+    }
+
+    .detail-character-details .detail-character-description {
+      margin-right: 2vh;
+    }
+
+  }
+  
+
+
+  
+  @media screen and (max-width: 425px) {
+    .detail-character-details {
+      margin: 0; 
+      display: flex;
+      flex-direction: column; /* Cambiar a dirección de columna */
+      align-items: center;
+      
+    }
+  
+    .detail-character-details .character-img {
+      order: 0; /* Cambiar el orden de la imagen para que esté debajo en dispositivos móviles */
+      
+    }
+
+    .detail-character-info {
+      font-size: 7vw;
+      margin: 0 3vw; 
+    }
+
+    .detail-character-info .detail-name-character {
+      font-size: 7vw;
+    }
+  
+    .detail-character-details .detail-character-description {
+      margin-top: 10px; /* Reducir el espacio entre la imagen y la descripción en dispositivos móviles */
+      font-size: 4vw;
+      margin: 0 3vw; 
+    }
+  }
+  
+
+  
 
   

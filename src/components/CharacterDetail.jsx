@@ -4,9 +4,8 @@ import { CharacterContext } from '../context/CharacterContext';
 import './styles/characterDetail.scss';
 import { FaHeart } from 'react-icons/fa';
 
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+
+
 import ComicItem from './ComicItem';
 
 
@@ -43,20 +42,6 @@ const CharacterDetail = () => {
     }
   };
 
-
-  
-  const sliderSettings = {
-    dots: false, // Oculta los botones de navegación
-    arrows: true, // Oculta las flechas de navegación
-    infinite: true,
-    speed: 600,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    vertical: false, // Desactiva la navegación vertical
-    className: "slider-container",
-  };
-  
-
   if (!character) {
     return <div>Loading...</div>;
   }
@@ -86,26 +71,24 @@ const CharacterDetail = () => {
         </div>
 
       </div>
-        <div className="detail-character-comics">
+   
+
+      <div className="detail-character-comics">
           <div className='character-comics' >
-            <h3>Comics</h3>
-            <div className="detail-character-comics">
-              {console.log(character.comics.items)}
-              <Slider {...sliderSettings} >
+            <h2 className='title-page'>Comics</h2>
+            <div class="slider">
                 {character.comics.items.map((comic, index) => (
-                  <ComicItem
-                    key={index}
-                    url={comic.resourceURI}
-                  />
+                   <div class="slide">
+                    <ComicItem
+                      key={index}
+                      url={comic.resourceURI}
+                    />
+                  </div>
                 ))}
-              </Slider>
-            </div>
-
-
-            
+            </div>        
           </div>
-        </div>
-      
+      </div>
+     
     </div>
   
 
