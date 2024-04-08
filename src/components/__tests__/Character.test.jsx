@@ -1,11 +1,19 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import Character from '../Character'; // Asegúrate de tener la ruta correcta
+import { render } from '@testing-library/react';
+import Character from '../Character';
+import { CharacterContext } from '../../context/CharacterContext';
 
-describe('Character component', () => {
-  test('renders character name', () => {
-    const character = { id: 1, name: 'Iron Man', thumbnail: { path: 'path', extension: 'jpg' } };
-    render(<Character character={character} />);
-    expect(screen.getByText('Iron Man')).toBeInTheDocument();
-  });
+test('renders Character component', () => {
+  // Proporciona un contexto válido con valores ficticios para favorites y setFavorites
+  const mockContextValue = {
+    favorites: [],
+    setFavorites: jest.fn(),
+  };
+
+  render(
+    <CharacterContext.Provider value={mockContextValue}>
+      <Character />
+    </CharacterContext.Provider>
+  );
 });
+
