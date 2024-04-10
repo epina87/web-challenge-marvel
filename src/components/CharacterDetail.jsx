@@ -76,16 +76,18 @@ const CharacterDetail = () => {
       <div className="detail-character-comics">
           <div className='character-comics' >
             <h2 className='title-page'>Comics</h2>
-            <div class="slider">
-                {character.comics.items.map((comic, index) => (
-                   <div class="slide">
-                    <ComicItem
-                      key={index}
-                      url={comic.resourceURI}
-                    />
-                  </div>
-                ))}
-            </div>        
+            <div className='comics-seccion-detail'>             
+              <div class="slider">
+                  {character.comics.items.map((comic, index) => (
+                    <div class="slide">
+                      <ComicItem
+                        key={index}
+                        url={comic.resourceURI}
+                      />
+                    </div>
+                  ))}
+              </div>  
+            </div>      
           </div>
       </div>
      

@@ -18,6 +18,17 @@ Este proyecto es una aplicación web que muestra información sobre personajes y
 
 5. Ejecuta la aplicación utilizando el comando: `npm start`.
 
+## Configuración de Variables de Entorno
+
+Para ejecutar la aplicación localmente o en un entorno de producción, necesitarás configurar las siguientes variables de entorno:
+
+- `REACT_APP_API_BASE_URL`: La URL base de la API de Marvel. "'https://gateway.marvel.com:443'"
+- `REACT_APP_API_KEY_PUBLIC`: La clave pública de la API de Marvel.
+- `REACT_APP_API_KEY_PRIVATE`: La clave privada de la API de Marvel.
+
+Asegúrate de que estas variables estén configuradas correctamente antes de ejecutar la aplicación.
+
+
 ## Pruebas y Construcción
 - Ejecutar pruebas: `npm test`
 - Construir la aplicación para producción: `npm run build`

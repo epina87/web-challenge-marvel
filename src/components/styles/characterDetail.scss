@@ -25,7 +25,7 @@
 
 .detail-character-details{
     margin: 0 5vw;
-    max-width: 1000px;
+    max-width: auto;
 
     padding: 0;
     display: grid;
@@ -41,13 +41,15 @@
     background-color: white;
     color: black;
     
-    max-width: 1000px;
+    max-width: auto;
     margin: 0 5vw;
     padding: 0;
 
     gap: 20px; /* Espacio entre las columnas */
     align-items: center; /* Centrar verticalmente los elementos */
     padding-bottom: 20px;
+
+  
 }
 
 
@@ -121,11 +123,13 @@
   .detail-character-comics {
     margin-top: 20px;
     padding-left: 20px;
+    text-align: center;
+    align-items: center;
   }
 
 
   .slider {
-    
+    max-width: 40rem;
     overflow-x: auto; /* Permitir desplazamiento horizontal */
     white-space: nowrap; /* Evitar que los elementos se desplacen a la siguiente línea */
 
@@ -141,8 +145,8 @@
   }
 
   .slider::-webkit-scrollbar {
-    width: 6px; /* Ancho de la barra de desplazamiento */
-    height: 3px;
+    width: 10px; /* Ancho de la barra de desplazamiento */
+    height: 10px;
   }
   
   .slider::-webkit-scrollbar-thumb {
@@ -150,7 +154,12 @@
     border-radius: 5px; /* Borde redondeado de la barra de desplazamiento */
   }
 
+  .comics-seccion-detail{
 
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
   
   @media screen and (max-width: 768px) {
     .detail-character-details,

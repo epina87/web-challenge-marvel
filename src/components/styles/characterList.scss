@@ -5,7 +5,7 @@
     grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     gap: 15px;
     margin: 0 auto; /* Centrar el grid y agregar margen */
-    max-width: 1430px; /* Establecer un ancho máximo */
+    max-width: auto; /* Establecer un ancho máximo */
   }
   
 
