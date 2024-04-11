@@ -28,7 +28,6 @@ Para ejecutar la aplicación localmente o en un entorno de producción, necesita
 
 Asegúrate de que estas variables estén configuradas correctamente antes de ejecutar la aplicación.
 
-
 ## Pruebas y Construcción
 - Ejecutar pruebas: `npm test`
 - Construir la aplicación para producción: `npm run build`
