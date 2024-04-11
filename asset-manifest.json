@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/web-challenge-marvel/static/css/main.65835402.css",
-    "main.js": "/web-challenge-marvel/static/js/main.05a71d36.js",
+    "main.css": "/web-challenge-marvel/static/css/main.a98edded.css",
+    "main.js": "/web-challenge-marvel/static/js/main.8bebb3f8.js",
     "static/media/marvel-logo.jpg": "/web-challenge-marvel/static/media/marvel-logo.3bf4b38766fa70f491cb.jpg",
     "index.html": "/web-challenge-marvel/index.html",
-    "main.65835402.css.map": "/web-challenge-marvel/static/css/main.65835402.css.map",
-    "main.05a71d36.js.map": "/web-challenge-marvel/static/js/main.05a71d36.js.map"
+    "main.a98edded.css.map": "/web-challenge-marvel/static/css/main.a98edded.css.map",
+    "main.8bebb3f8.js.map": "/web-challenge-marvel/static/js/main.8bebb3f8.js.map"
   },
   "entrypoints": [
-    "static/css/main.65835402.css",
-    "static/js/main.05a71d36.js"
+    "static/css/main.a98edded.css",
+    "static/js/main.8bebb3f8.js"
   ]
 }
