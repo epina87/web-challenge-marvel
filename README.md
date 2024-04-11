@@ -14,7 +14,7 @@ Este proyecto es una aplicación web que muestra información sobre personajes y
 1. Clona el repositorio en tu máquina local: `git clone <URL_DEL_REPOSITORIO>`.
 2. Navega al directorio del proyecto: `cd web-challenge-marvel`.
 3. Instala las dependencias utilizando el comando: `npm install`.
-4. Crea un archivo `.env` en la raíz del proyecto y configura las siguientes variables de entorno:
+4. Crea un archivo `.env.local` en la raíz del proyecto sustituyendo a .env.copy y configura las siguientes variables de entorno:
 
 5. Ejecuta la aplicación utilizando el comando: `npm start`.
 

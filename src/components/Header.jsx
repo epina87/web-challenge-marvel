@@ -1,9 +1,9 @@
 import React from 'react';
-import { FaHeart } from 'react-icons/fa'; // Importamos el icono de corazón
-import { NavLink } from 'react-router-dom'; // Importamos Link para la navegación
+import { FaHeart } from 'react-icons/fa'; 
+import { NavLink } from 'react-router-dom'; 
 import { useCharacters } from '../context/CharacterContext';
 import './styles/header.scss';
-import marvelLogo from '../img/marvel-logo.jpg'; // Importa la imagen del logo de Marvel
+import marvelLogo from '../img/marvel-logo.jpg'; 
 
 const Header = () => {
   const { favorites } = useCharacters();
@@ -11,6 +11,8 @@ const Header = () => {
   // Verifica si favorites es null o undefined antes de acceder a su propiedad length
   const numFavorites = favorites ? favorites.length : 0;
 
+
+  console.log('Favorites: ', favorites);
   return (
     <div className="header">
       <div className="header-left">
