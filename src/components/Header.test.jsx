@@ -1,4 +1,4 @@
-mport React from 'react';
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { CharacterContext } from '../context/CharacterContext';
 import Header from './Header';
@@ -18,6 +18,8 @@ const renderComponent = (props) => {
 
 describe('Header component', () => {
   it('renders', () => {
-    renderComponent()
+    expect(renderComponent()).getByTestId( 'test-id');
   })
 });
+
+
