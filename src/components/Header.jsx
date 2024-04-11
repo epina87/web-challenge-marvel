@@ -11,7 +11,6 @@ const Header = () => {
   const numFavorites = favorites ? favorites.length : 0;
 
 
-  console.log('Favorites: ', favorites);
   return (
     <div className="header" id="test-id">
       <div className="header-left">

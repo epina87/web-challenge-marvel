@@ -77,16 +77,16 @@ const CharacterDetail = () => {
           <div className='character-comics' >
             <h2 className='title-page'>Comics</h2>
             <div className='comics-seccion-detail'>             
-              <div class="slider">
-                  {character.comics.items.map((comic, index) => (
-                    <div class="slide">
+              <div className="slider">
+                  {character.comics.items.map((comic) => (
+                    <div key={comic.resourceURI} className="slide"> {/* Mueve la key aquí y usa un identificador único si es posible */}
                       <ComicItem
-                        key={index}
                         url={comic.resourceURI}
                       />
                     </div>
                   ))}
-              </div>  
+              </div>
+
             </div>      
           </div>
       </div>
