@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
-import { FaSearch } from 'react-icons/fa'; // Importamos el icono de la lupa desde react-icons
-import './styles/searchBar.scss'; // Importamos los estilos del componente
+import { FaSearch } from 'react-icons/fa'; 
+import './styles/searchBar.scss'; 
 
 const SearchBar = ({ onSearch }) => {
-  const [query, setQuery] = useState(''); // Estado para almacenar la consulta de búsqueda
+  const [query, setQuery] = useState(''); 
 
   const handleInputChange = (event) => {
-    const value = event.target.value; // Obtenemos el valor del campo de entrada
-    setQuery(value); // Actualizamos el estado de la consulta de búsqueda
-    onSearch(value); // Llamamos a la función de búsqueda con la consulta actual
+    const value = event.target.value; 
+    setQuery(value); 
+    onSearch(value); 
   };
 
   return (
-    <div className="search-bar">
+    <div className="search-bar" data-testid="search-bar">
       <FaSearch className="search-icon" />
       <input
         type="text"
         className="search-input"
         placeholder="SEARCH A CHARACTER ..."
-        value={query} // Asignamos el valor del estado como valor del campo de entrada
-        onChange={handleInputChange} // Asignamos el manejador de cambios al campo de entrada
+        value={query}
+        onChange={handleInputChange}
+        data-testid="search-bar-input" 
       />
       <div className="underline"></div>
     </div>

@@ -2,8 +2,6 @@ import md5 from 'md5';
 import axios from 'axios';
 
 
-
-
 export const getCall = async (detail) => {
   if (!detail) throw new Error('Detail parameter is required');
 

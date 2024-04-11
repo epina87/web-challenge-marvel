@@ -12,7 +12,7 @@ const Header = () => {
 
 
   return (
-    <div className="header" id="test-id">
+    <div className="header" data-testid="test-id">
       <div className="header-left">
         <NavLink to="/" className="favorites-link">
           <img src={marvelLogo} alt="Marvel Logo" className="logo" />

@@ -6,6 +6,7 @@ import MainView from './components/MainView';
 import Header from './components/Header';
 import FavoritesList from './components/FavoritesView'; 
 import CharacterDeatil from './components/CharacterDetail'; 
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/favorites" element={<FavoritesList />} /> 
             <Route path="/detail/:id" element={< CharacterDeatil />} /> 
           </Routes>
+          <Footer/>
         </Router>
       </CharacterProvider>
     </div>
