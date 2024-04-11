@@ -1,7 +1,7 @@
 import md5 from 'md5';
 import axios from 'axios';
 
-window.config = JSON.stringify(process.env);
+
 
 
 export const getCall = async (detail) => {
@@ -37,8 +37,9 @@ export const getComic = async (detail = "comics", Api_URL) => {
     const response = await axios.get(url);
     return response.data.data;
   } catch (error) {
-    console.error("Error fetching comic details:", error);
+      console.error("Error fetching comic details:", error);
     throw error;
   }
 };
+
 
