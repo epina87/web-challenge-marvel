@@ -18,9 +18,8 @@ const renderComponent = (props) => {
 
 describe('Header component', () => {
   it('renders', () => {
-    renderComponent()
+    expect(renderComponent()).getByTestId( 'test-id');
   })
 });
-
 
 

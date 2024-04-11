@@ -15,6 +15,7 @@ function App() {
           <Header />
           <Routes> 
             <Route path="/" element={<MainView />} /> 
+            <Route path="/web-challenge-marvel" element={<MainView />} /> 
             <Route path="/favorites" element={<FavoritesList />} /> 
             <Route path="/detail/:id" element={< CharacterDeatil />} /> 
           </Routes>
